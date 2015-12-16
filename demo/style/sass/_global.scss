@@ -1,0 +1,125 @@
+/**
+ * 2.0 Global
+ *
+ * ----------------------------------------------------------------------------
+ */
+$bg-color: #fbf8f4;
+$nav-color: #f6fafe;
+$nav-dark-color: darken($nav-color, 10%);
+$nav-light-color: lighten($nav-color, 10%);
+$text-color: #6f8ba9;
+$text-dark-color: darken($text-color, 10%);
+$text-light-color: lighten($text-color, 10%);
+$line-color: #d7e3f0;
+
+$zindex-nav: 999;
+
+html{height: 100%;font-size: 10px;}
+body{
+ 	height: 100%; 
+ 	font-size: 2rem;
+}
+
+$hheader: 5rem;
+header{
+	width: 100%;
+	height: $hheader;
+	background: #f6fafe;
+	border-top: 2px solid #fdfeff;
+	border-bottom: 1px solid $line-color;
+	color: $text-color;
+	position: fixed;
+	top: 0px;
+	z-index: $zindex-nav;
+	.back{
+		width: $hheader;
+		height: $hheader;
+		display: inline-block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: url('../../images/back.png') no-repeat;
+		background-position: center;
+		background-size: 50%;
+	}
+	p{
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		line-height: $hheader;
+		font-weight: bold;
+	}
+}
+
+.u-content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding-top: $hheader;
+	/*position: relative;*/
+	z-index: 1;
+	overflow:hidden;
+}
+
+
+button{
+	width:8rem;
+	height:4rem;
+}
+
+/* flex-display */
+@mixin flex-display {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/* flex-num */
+@mixin flex($columns: 1) {
+  -webkit-box-flex: $columns;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: $columns;         /* OLD - Firefox 19- */
+  width: 20%;               /* For old syntax, otherwise collapses. */
+  -webkit-flex: $columns;          /* Chrome */
+  -ms-flex: $columns;              /* IE 10 */
+  flex: $columns;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/* line-num */
+@mixin line-num($row: 1) {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp:$row;
+	-webkit-box-orient:vertical;
+}
+
+/* box-redius */
+@mixin bor-redius($radius: 1rem) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+/* flex-display */
+@mixin transform-origin($x: left, $y: center) {
+	-moz-transform-origin:$x $y;
+	-ms-transform-origin:$x $y;
+	-o-transform-origin:$x $y;
+	-webkit-transform-origin:$x $y;
+	transform-origin:$x $y;
+}
+
+/* transform-rotate */
+@mixin transform-rotate($deg: 90deg) {
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}

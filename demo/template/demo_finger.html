@@ -1,0 +1,61 @@
+<!-- css -->
+<style type="text/css">
+ 	.touch-finger{
+ 		width: 2rem;
+ 		height: 2rem;
+ 		background-color: rgba(0,0,0,0.3);
+ 		border-radius: 1rem;
+ 		-moz-box-shadow:0px 0px 5px #fff inset;              
+	    -webkit-box-shadow:0px 0px 5px #fff inset;           
+	    box-shadow:0px 0px 5px #fff inset;  
+	    border: #ccc solid 1px;
+ 		-moz-box-shadow:0px 0px 5px #fff;              
+	    -webkit-box-shadow:0px 0px 5px #fff;           
+	    box-shadow:0px 0px 5px #fff;   
+	    position: absolute;
+	    opacity: 0.0;
+	    z-index: 99999;
+ 	}
+ 	@-webkit-keyframes finger {
+	  from {
+	    opacity: 1.0;
+	    -webkit-transform: scale(0.5, 0.5);
+	    -moz-transform: scale(0.5, 0.5);
+	    -o-transform: scale(0.5, 0.5);
+	    -ms-transform: scale(0.5, 0.5);
+	    transform: scale(0.5, 0.5);
+	  }
+	  to {
+	    opacity: 0.0;
+	    -webkit-transform: scale(2.5, 2.5);
+	    -moz-transform: scale(2.5, 2.5);
+	    -o-transform: scale(2.5, 2.5);
+	    -ms-transform: scale(2.5, 2.5);
+	    transform: scale(2.5, 2.5);
+	  }
+	}
+ 	.touch-finger-animation {
+	    animation: finger 0.3s forwards ease-in;
+	}
+</style>
+
+<!-- html -->
+<div class="finger-container"></div>
+
+<!-- js -->
+<script type="text/javascript">
+	var count = 0;
+	document.addEventListener('touchstart', function(e) {
+	    e.preventDefault();
+	    var touch = e.touches[0];
+	    if($('.finger-container').children().length > 2){
+	    	$('.finger-container').children().eq(0).remove();
+	    }
+	    $(".finger-container").append("<div class='touch-finger touch-finger"+ count +"'></div>");
+	    $('.touch-finger'+count).css('top',touch.pageY-11);
+	    $('.touch-finger'+count).css('left',touch.pageX-11);
+	    $('.touch-finger'+count).addClass('touch-finger-animation');
+
+		count++;
+	}, false);
+</script>

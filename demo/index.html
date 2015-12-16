@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js" ng-controller="MainCtrl"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<!-- ios保存至桌面设置 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon-precomposed" href="touch-icon-iphone-retina.png" />
+  <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+<!-- css -->
+  <link rel="stylesheet" href="style/css/style.css">
+  <link rel="stylesheet" href="bower_components/ngProgress-master/ngProgress.css">
+
+<!-- 标题党 -->
+  <title>UDemo</title>
+</head>
+  <body>
+  <header>
+    <a href="#/list" class="back" style="display:none;"></a>
+    <p>{{UDemo}}</p>
+  </header>
+  <div ng-view class="ng-scope u-content "></div>
+
+  <!-- JS -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bouncefix.js/dist/bouncefix.js"></script>
+
+  <!-- Angular JS -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate.js"></script>
+  <script src="bower_components/ngProgress-master/build/ngProgress.js"></script>
+  <script src="bower_components/BaiduMapForAngularJS/baiduMap.js"></script>
+  <script src="app.js"></script>
+  <script src="controller/list.js"></script>
+  <script src="controller/demo_nav.js"></script>
+  <script src="controller/demo_map.js"></script>
+  <script src="controller/demo_header.js"></script>
+  <script src="controller/demo_bubble.js"></script>
+  <script src="controller/demo_pie.js"></script>
+
+  <!-- baidu API
+  <script type="text/javascript" name="baidu-tc-cerfication" data-appid="7362600" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=41YqEkDn62PsEnDBmT5BAGlc"></script>
+-->
+  <!-- fix content -->
+  <script type="text/javascript">
+    bouncefix.add('u-content');
+  </script>
+
+  <!-- JS End -->
+  </body>
+</html>

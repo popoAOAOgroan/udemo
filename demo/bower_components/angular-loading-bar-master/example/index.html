@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.min.js"></script>
+
+    <!-- loadingbar -->
+    <script src="../src/loading-bar.js"></script>
+    <link href='../src/loading-bar.css' rel='stylesheet' />
+
+    <!-- example app -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script src="app.js"></script>
+    <link href='app.css' rel='stylesheet' />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body ng-app="LoadingBarExample" ng-controller="ExampleCtrl">
+    
+
+    <div class="examples" ng-hide="fakeIntro">
+      <!-- <h4>Examples:</h4> -->
+      <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-primary btn-lg" ng-click="start()">
+          <i class="glyphicon glyphicon-play-circle"></i> <span>cfpLoadingBar.</span>start()
+        </a>
+        <a href="#" class="btn btn-primary btn-lg" ng-click="complete()">
+          <i class="glyphicon glyphicon-play-circle"></i> <span>cfpLoadingBar.</span>complete()
+        </a>
+        <a href="#" class="btn btn-primary btn-lg" ng-click="fetch()"><i class="glyphicon glyphicon-play-circle"></i> Real Example <span> (from reddit)</span></a>
+      </div>
+    </div>
+
+
+  </body>
+</html>

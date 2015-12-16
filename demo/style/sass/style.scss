@@ -1,0 +1,323 @@
+@import "reset";
+@import "global";
+@import "animate";
+
+/**
+ * 0 List 
+ */
+.con-list{
+	li{
+		@include flex-display;
+		$hli:6.5rem;
+		background: #fff;
+		height: $hli;
+		border-bottom: 1px solid $line-color;
+		color: $text-color;
+		line-height: $hli;
+		a{
+			width: 100%;
+		}
+		span{
+			font-size: 2.5rem;
+			display: inline-block;
+			width: 7.5rem;
+			height: 100%;
+			font-weight: bold;
+			border-right: dashed 2px $line-color; 
+			text-align: center;
+			color: $text-dark-color;
+			text-shadow: 1px 1px #bbb;
+		}
+		span:before{
+			$ws-a: 1rem;
+			content: "";
+			display: inline-block;
+			width: $ws-a;
+			height: $ws-a;
+			border: 0.2rem solid $line-color;
+			border-radius: $ws-a;
+			background: #fff;
+			margin: 0px 1rem 0 0
+		}
+		p{
+			/*@include flex(1);
+			@include line-num(2);*/
+			display: inline-block;
+			padding: 0 1rem;
+		}
+	}
+}
+
+
+/**
+ * 1 Nav 
+ */
+ $hfooter : 5rem;
+ .con-demonav{
+ 	button{
+ 		margin:20rem 0 0 6rem;
+ 	}
+ }
+ footer{
+ 	width: 100%;
+ 	height: $hfooter;
+ 	background: $nav-color;
+ 	border-top: 1px solid $line-color;
+ 	position: fixed;
+ 	bottom: 0px;
+ 	&.flex-box{
+		@include flex-display;
+ 	}
+ 	&.box1 div{@include flex(1);}
+ 	div{
+ 		a{width: 100%;height: 100%;display: inline-block;color: inherit;}
+ 		height: 100%;
+ 		text-align: center;
+ 		color: $text-color;
+ 		line-height: $hfooter;
+ 		border-left: 1px solid $nav-dark-color
+ 	}
+ 	.active{
+ 		background: #6f8ba9;
+ 		color: #fff;
+ 	}
+ } 
+
+/**
+ * 3 Header 
+ */
+ .con-demoheader{
+ 	background: #A8ACB9;
+    height: 100%;
+    width: 100%;
+    padding: 6rem 0 0 0;
+ 	.header{
+	 	$demohhight: $hheader; 
+	 	$demotcolor: $text-color; 
+	 	$demohcolor: $nav-color;  
+	 	$demoborcolor: $line-color;
+	 	$demobtncolor: $nav-dark-color;
+	 	width: 100%;
+	 	height: $demohhight;
+	 	background: $demohcolor;
+	 	margin: 0 0 3rem 0;
+	 	text-align: center;
+
+	 	&.flex-box{
+			@include flex-display;
+			justify-content:space-between; 
+	 	}
+ 		p{
+ 			color: $demotcolor;
+ 			width: auto;
+ 			height: inherit;
+ 			line-height: $demohhight;
+ 			display: inline-block;
+ 		}
+ 		.left-side, .right-side{
+ 			width: $demohhight * 1.2;
+ 			height: $demohhight;
+ 		}
+ 		.left-side{
+ 			float: left;
+		}
+ 		.right-side{
+ 			float: right;
+ 		}
+ 		.left-b, .right-b{
+ 			width: inherit;
+ 			height: inherit;
+ 			border: 0px;
+ 			outline: none;
+ 			padding: 0px;
+ 			background: $demobtncolor;
+ 			transition: all 200ms ease-out;
+ 		}
+ 		.left-b:active , .right-b:active{
+ 			background: $nav-light-color;
+ 		}
+ 		.left-b:before, .right-b:before{
+ 			content: "";
+ 			display: inline-block;
+ 			width: inherit;
+ 			height: inherit;
+ 		}
+ 		.left-b{
+ 			border-right: 1px $demoborcolor solid;
+		}
+ 		.right-b{
+ 			border-left: 1px $demoborcolor solid;
+ 		}
+ 		.left-b:before{
+ 			background: url('../../images/nav-2.png') no-repeat center;
+ 		}
+ 		.right-b:before{
+ 			background: url('../../images/nav-5.png') no-repeat center;;
+ 		}
+ 		&.box1 .center-area{@include flex(1);}
+ 		.center-area{
+ 			padding: 0.7rem 1rem;
+	 		input[type=text]{
+	 			width: 100%;
+	 			height: 3rem;
+	 			padding: 0 1rem;
+	 		}
+ 		}
+ 	}
+ }
+
+
+/**
+ * 4 Bubble 
+ */
+
+ .con-demobubble{
+ 	$bub-minwidth: 20%;
+ 	$bub-maxwidth: 70%;
+ 	$bub-height: 4rem;
+ 	$bub-redius: 1.5rem;
+ 	$bub-bgcolor: #C9EC74;
+ 	$bub-arrow: 1rem;
+ 	.bubble{
+ 		min-width: $bub-minwidth;
+ 		max-width: $bub-maxwidth;
+ 		min-height: $bub-height;
+ 		display: block;
+ 		@include bor-redius($bub-redius);
+ 		background: $bub-bgcolor;
+ 		position: absolute;
+/*	    top: 6rem;
+	    left: 2rem;*/
+	    padding: 1rem 1.5rem;
+	    font-size: 1.5rem;
+	    line-height: 1.5rem;
+
+		&.arrow-b:after,&.arrow-t:before,&.arrow-l:before,&.arrow-r:after {
+		    content: "";
+		    position: absolute;
+		    border-style: solid;
+		    display: block;
+		    width: 0;
+		}
+		&.arrow-t:before {
+			border-width: 0 $bub-arrow $bub-arrow;
+		    border-color: $bub-bgcolor transparent;
+		    top: - $bub-arrow;
+		    left: 47px;
+		}
+		&.arrow-b:after {
+		    border-width: $bub-arrow $bub-arrow 0;
+		    border-color: $bub-bgcolor transparent;
+		    bottom: - $bub-arrow;
+		    left: 47px;
+		}
+		&.arrow-l:before {
+		    border-width: $bub-arrow $bub-arrow*2 $bub-arrow 0;
+		    border-color: transparent $bub-bgcolor;
+		    top: $bub-arrow;
+		    left: -$bub-arrow;
+		}
+		&.arrow-r:after {
+			border-width: $bub-arrow 0 $bub-arrow $bub-arrow*2;
+		    border-color: transparent $bub-bgcolor;
+		    bottom: $bub-arrow;
+		    right: -$bub-arrow;
+		}
+ 	}
+ }
+
+ /**
+ * 5 Pie & Finger
+ */
+
+ .con-demopie{
+ 	padding-top: 4rem; 
+ 	background-color: #AEADD0;
+ 	width: 100%;
+ 	height: 100%;
+ 	.pie{
+ 		position: absolute;
+ 		width: 200px;
+ 		height: 200px;
+ 		overflow: hidden;
+ 		left: 150px;
+ 		@include transform-origin(left, center);
+ 	}
+ 	.pie.big {
+ 		width: 200px;
+ 		height: 200px;
+ 		left: 50px;
+ 		@include transform-origin(center, center);
+ 	}
+ 	.pie:before{
+ 		content: "";
+ 		position: absolute;
+ 		width: 100px;
+ 		height: 200px;
+ 		left: -100px;
+ 		border-radius: 100px 0 0 100px;
+ 		@include transform-origin(right, center);
+ 	}
+ 	.pie.big:before{
+ 		left: 0px;
+ 	}
+ 	.pie.big:after{
+ 		content:"";
+ 		position: absolute;
+ 		width: 100px;
+ 		height: 200px;
+ 		left: 100px;
+ 		border-radius: 0 100px 100px 0;
+ 	}
+ 	.pie:nth-of-type(1):before, .pie:nth-of-type(1):after {
+ 		background-color: blue;
+ 	}
+ 	.pie:nth-of-type(2):before, .pie:nth-of-type(2):after {
+ 		background-color: green;
+ 	}
+ 	.pie:nth-of-type(3):before, .pie:nth-of-type(3):after {
+ 		background-color: red;
+ 	}
+ 	.pie:nth-of-type(4):before, .pie:nth-of-type(4):after {
+ 		background-color: yellow;
+ 	}
+ 	/*------- 1 --------*/
+ 	.pie[data-start="30"] {
+ 		@include transform-rotate(30deg);
+ 	}
+ 	.pie[data-value="30"]:before {
+ 		@include transform-rotate(31deg);
+ 	}
+	/*------- 2 --------*/
+ 	.pie[data-start="60"] {
+ 		@include transform-rotate(60deg);
+ 	}
+ 	.pie[data-value="40"]:before {
+ 		@include transform-rotate(41deg);
+ 	}
+	/*------- 3 --------*/
+ 	.pie[data-start="100"] {
+ 		@include transform-rotate(100deg);
+ 	}
+ 	.pie[data-value="260"]:before {
+ 		@include transform-rotate(260deg);
+ 	}
+
+ 	.touch-finger{
+ 		width: 2rem; 
+ 		height: 2rem; 
+ 		background-color: rgba(0,0,0,0.3);
+ 		border-radius: 1rem;
+ 		-moz-box-shadow:0px 0px 5px #fff inset;              
+	    -webkit-box-shadow:0px 0px 5px #fff inset;           
+	    box-shadow:0px 0px 5px #fff inset;  
+	    border: #ccc solid 1px;
+ 		-moz-box-shadow:0px 0px 5px #fff;              
+	    -webkit-box-shadow:0px 0px 5px #fff;           
+	    box-shadow:0px 0px 5px #fff;   
+	    position: absolute;
+	    opacity: 0.0;
+	    z-index: 99999;
+	    pointer-events: none;
+ 	}
+ } 

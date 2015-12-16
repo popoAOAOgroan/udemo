@@ -1,0 +1,109 @@
+/**
+ * 3.0 Animate
+ *
+ * ----------------------------------------------------------------------------
+ */
+
+ /* Transform */
+@mixin transformX ($x: 0) {
+    -webkit-transform: translateX($x);
+    -moz-transform: translateX($x);
+    -o-transform: translateX($x);
+    -ms-transform: translateX($x);
+    transform: translateX($x);
+}
+
+@mixin transformScale ($x: 0, $y: 0) {
+    -webkit-transform: scale($x,$y);
+    -moz-transform: scale($x,$y);
+    -o-transform: scale($x,$y);
+    -ms-transform: scale($x,$y);
+    transform: scale($x,$y);
+}
+
+/* slide out from the left & right */
+@keyframes slideOutLeft {
+    to      { @include transformX(-100%); }
+}
+
+@-webkit-keyframes slideOutLeft {
+    to      { @include transformX(-100%); }
+}
+
+@keyframes slideOutRight {
+    to      { @include transformX(100%); }
+}
+
+@-webkit-keyframes slideOutRight {
+    to      { @include transformX(100%); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { @include transformX(100%); }
+    to      { @include transformX(0); }
+}
+
+@-webkit-keyframes slideInRight {
+    from    { @include transformX(100%); }
+    to      { @include transformX(0); }
+}
+
+/* appear */
+@-webkit-keyframes inopacity {
+    from    { opacity: 0.0; }
+    to      { opacity: 1.0; }
+}
+
+/* hidden */
+@-webkit-keyframes Outopacity {
+    from    { opacity: 1.0; }
+    to      { opacity: 0.0; }
+}
+
+.ng-enter{ 
+  /*animation: slideInRight 0.5s both ease-in; */
+   /*-webkit-transition: all 1s ease-out;*/
+   animation: inopacity 0.5s both ease-in; 
+  z-index: 88;
+}
+.ng-leave{ 
+  /*&.goback{*/
+    /*animation: slideOutLeft 0.5s both ease-in; */
+   animation: Outopacity 0.5s both ease-put; 
+    /*-webkit-transition: all 1s ease-in; */
+    z-index: 99; 
+/*  }
+  &.goinside{
+    animation: slideOutRight 0.5s both ease-in; 
+    z-index: 99; 
+  }*/
+}
+
+/* touch-finger */
+@keyframes finger {
+    from    { opacity: 1.0; @include transformScale(0.5,0.5);}
+    to      { opacity: 0.0; @include transformScale(2.5,2.5);}
+}
+
+@-moz-keyframes finger {
+    from    { opacity: 1.0; @include transformScale(0.5,0.5);}
+    to      { opacity: 0.0; @include transformScale(2.5,2.5);}
+}
+
+@-webkit-keyframes finger {
+    from    { opacity: 1.0; @include transformScale(0.5,0.5);}
+    to      { opacity: 0.0; @include transformScale(2.5,2.5);}
+}
+
+@-o-keyframes finger {
+    from    { opacity: 1.0; @include transformScale(0.5,0.5);}
+    to      { opacity: 0.0; @include transformScale(2.5,2.5);}
+}
+
+.touch-finger-animation{
+  animation: finger 0.3s forwards ease-in;
+  -moz-animation: finger 0.3s forwards ease-in;
+  -webkit-animation: finger 0.3s forwards ease-in;
+  -o-animation: finger 0.3s forwards ease-in;
+}  

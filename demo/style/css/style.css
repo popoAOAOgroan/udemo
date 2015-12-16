@@ -1,0 +1,848 @@
+/**
+ * 1.0 Reset
+ * From http://meyerweb.com/eric/tools/css/reset/
+ * Last Time Modified: 2015/10/29
+ *
+ * ----------------------------------------------------------------------------
+ */
+/* line 8, ../sass/_reset.scss */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/* line 9, ../sass/_reset.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 11, ../sass/_reset.scss */
+fieldset, img {
+  border: 0;
+}
+
+/* line 12, ../sass/_reset.scss */
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 13, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 14, ../sass/_reset.scss */
+caption, th {
+  text-align: left;
+}
+
+/* line 15, ../sass/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 16, ../sass/_reset.scss */
+q:before, q:after {
+  content: '';
+}
+
+/* line 17, ../sass/_reset.scss */
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* line 18, ../sass/_reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 19, ../sass/_reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 20, ../sass/_reset.scss */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* line 21, ../sass/_reset.scss */
+input, textarea, select {
+  *font-size: 100%;
+}
+
+/* line 22, ../sass/_reset.scss */
+legend {
+  color: #000;
+}
+
+/* line 22, ../sass/_reset.scss */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/* line 24, ../sass/_reset.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 25, ../sass/_reset.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 26, ../sass/_reset.scss */
+.cf:after, section:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 27, ../sass/_reset.scss */
+body {
+  webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 28, ../sass/_reset.scss */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* line 29, ../sass/_reset.scss */
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+/**
+ * 2.0 Global
+ *
+ * ----------------------------------------------------------------------------
+ */
+/* line 17, ../sass/_global.scss */
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+/* line 18, ../sass/_global.scss */
+body {
+  height: 100%;
+  font-size: 2rem;
+}
+
+/* line 24, ../sass/_global.scss */
+header {
+  width: 100%;
+  height: 5rem;
+  background: #f6fafe;
+  border-top: 2px solid #fdfeff;
+  border-bottom: 1px solid #d7e3f0;
+  color: #6f8ba9;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+}
+/* line 34, ../sass/_global.scss */
+header .back {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url("../../images/back.png") no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+/* line 45, ../sass/_global.scss */
+header p {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  font-weight: bold;
+}
+
+/* line 54, ../sass/_global.scss */
+.u-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding-top: 5rem;
+  /*position: relative;*/
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* line 69, ../sass/_global.scss */
+button {
+  width: 8rem;
+  height: 4rem;
+}
+
+/* flex-display */
+/* flex-num */
+/* line-num */
+/* box-redius */
+/* flex-display */
+/* transform-rotate */
+/**
+ * 3.0 Animate
+ *
+ * ----------------------------------------------------------------------------
+ */
+/* Transform */
+/* slide out from the left & right */
+@keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideOutRight {
+  to {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes slideOutRight {
+  to {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+/* slide in from the right */
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+/* appear */
+@-webkit-keyframes inopacity {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+/* hidden */
+@-webkit-keyframes Outopacity {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    opacity: 0.0;
+  }
+}
+/* line 64, ../sass/_animate.scss */
+.ng-enter {
+  /*animation: slideInRight 0.5s both ease-in; */
+  /*-webkit-transition: all 1s ease-out;*/
+  animation: inopacity 0.5s both ease-in;
+  z-index: 88;
+}
+
+/* line 70, ../sass/_animate.scss */
+.ng-leave {
+  /*&.goback{*/
+  /*animation: slideOutLeft 0.5s both ease-in; */
+  animation: Outopacity 0.5s both ease-put;
+  /*-webkit-transition: all 1s ease-in; */
+  z-index: 99;
+  /*  }
+    &.goinside{
+      animation: slideOutRight 0.5s both ease-in; 
+      z-index: 99; 
+    }*/
+}
+
+/* touch-finger */
+@keyframes finger {
+  from {
+    opacity: 1.0;
+    -webkit-transform: scale(0.5, 0.5);
+    -moz-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    opacity: 0.0;
+    -webkit-transform: scale(2.5, 2.5);
+    -moz-transform: scale(2.5, 2.5);
+    -o-transform: scale(2.5, 2.5);
+    -ms-transform: scale(2.5, 2.5);
+    transform: scale(2.5, 2.5);
+  }
+}
+@-moz-keyframes finger {
+  from {
+    opacity: 1.0;
+    -webkit-transform: scale(0.5, 0.5);
+    -moz-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    opacity: 0.0;
+    -webkit-transform: scale(2.5, 2.5);
+    -moz-transform: scale(2.5, 2.5);
+    -o-transform: scale(2.5, 2.5);
+    -ms-transform: scale(2.5, 2.5);
+    transform: scale(2.5, 2.5);
+  }
+}
+@-webkit-keyframes finger {
+  from {
+    opacity: 1.0;
+    -webkit-transform: scale(0.5, 0.5);
+    -moz-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    opacity: 0.0;
+    -webkit-transform: scale(2.5, 2.5);
+    -moz-transform: scale(2.5, 2.5);
+    -o-transform: scale(2.5, 2.5);
+    -ms-transform: scale(2.5, 2.5);
+    transform: scale(2.5, 2.5);
+  }
+}
+@-o-keyframes finger {
+  from {
+    opacity: 1.0;
+    -webkit-transform: scale(0.5, 0.5);
+    -moz-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    opacity: 0.0;
+    -webkit-transform: scale(2.5, 2.5);
+    -moz-transform: scale(2.5, 2.5);
+    -o-transform: scale(2.5, 2.5);
+    -ms-transform: scale(2.5, 2.5);
+    transform: scale(2.5, 2.5);
+  }
+}
+/* line 104, ../sass/_animate.scss */
+.touch-finger-animation {
+  animation: finger 0.3s forwards ease-in;
+  -moz-animation: finger 0.3s forwards ease-in;
+  -webkit-animation: finger 0.3s forwards ease-in;
+  -o-animation: finger 0.3s forwards ease-in;
+}
+
+/**
+ * 0 List 
+ */
+/* line 9, ../sass/style.scss */
+.con-list li {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  background: #fff;
+  height: 6.5rem;
+  border-bottom: 1px solid #d7e3f0;
+  color: #6f8ba9;
+  line-height: 6.5rem;
+}
+/* line 17, ../sass/style.scss */
+.con-list li a {
+  width: 100%;
+}
+/* line 20, ../sass/style.scss */
+.con-list li span {
+  font-size: 2.5rem;
+  display: inline-block;
+  width: 7.5rem;
+  height: 100%;
+  font-weight: bold;
+  border-right: dashed 2px #d7e3f0;
+  text-align: center;
+  color: #56728f;
+  text-shadow: 1px 1px #bbb;
+}
+/* line 31, ../sass/style.scss */
+.con-list li span:before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 0.2rem solid #d7e3f0;
+  border-radius: 1rem;
+  background: #fff;
+  margin: 0px 1rem 0 0;
+}
+/* line 42, ../sass/style.scss */
+.con-list li p {
+  /*@include flex(1);
+  @include line-num(2);*/
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+/**
+ * 1 Nav 
+ */
+/* line 57, ../sass/style.scss */
+.con-demonav button {
+  margin: 20rem 0 0 6rem;
+}
+
+/* line 61, ../sass/style.scss */
+footer {
+  width: 100%;
+  height: 5rem;
+  background: #f6fafe;
+  border-top: 1px solid #d7e3f0;
+  position: fixed;
+  bottom: 0px;
+}
+/* line 68, ../sass/style.scss */
+footer.flex-box {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+/* line 71, ../sass/style.scss */
+footer.box1 div {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  width: 20%;
+  /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+/* line 72, ../sass/style.scss */
+footer div {
+  height: 100%;
+  text-align: center;
+  color: #6f8ba9;
+  line-height: 5rem;
+  border-left: 1px solid #c8e1f9;
+}
+/* line 73, ../sass/style.scss */
+footer div a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  color: inherit;
+}
+/* line 80, ../sass/style.scss */
+footer .active {
+  background: #6f8ba9;
+  color: #fff;
+}
+
+/**
+ * 3 Header 
+ */
+/* line 89, ../sass/style.scss */
+.con-demoheader {
+  background: #A8ACB9;
+  height: 100%;
+  width: 100%;
+  padding: 6rem 0 0 0;
+}
+/* line 94, ../sass/style.scss */
+.con-demoheader .header {
+  width: 100%;
+  height: 5rem;
+  background: #f6fafe;
+  margin: 0 0 3rem 0;
+  text-align: center;
+}
+/* line 106, ../sass/style.scss */
+.con-demoheader .header.flex-box {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: space-between;
+}
+/* line 110, ../sass/style.scss */
+.con-demoheader .header p {
+  color: #6f8ba9;
+  width: auto;
+  height: inherit;
+  line-height: 5rem;
+  display: inline-block;
+}
+/* line 117, ../sass/style.scss */
+.con-demoheader .header .left-side, .con-demoheader .header .right-side {
+  width: 6rem;
+  height: 5rem;
+}
+/* line 121, ../sass/style.scss */
+.con-demoheader .header .left-side {
+  float: left;
+}
+/* line 124, ../sass/style.scss */
+.con-demoheader .header .right-side {
+  float: right;
+}
+/* line 127, ../sass/style.scss */
+.con-demoheader .header .left-b, .con-demoheader .header .right-b {
+  width: inherit;
+  height: inherit;
+  border: 0px;
+  outline: none;
+  padding: 0px;
+  background: #c8e1f9;
+  transition: all 200ms ease-out;
+}
+/* line 136, ../sass/style.scss */
+.con-demoheader .header .left-b:active, .con-demoheader .header .right-b:active {
+  background: white;
+}
+/* line 139, ../sass/style.scss */
+.con-demoheader .header .left-b:before, .con-demoheader .header .right-b:before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+}
+/* line 145, ../sass/style.scss */
+.con-demoheader .header .left-b {
+  border-right: 1px #d7e3f0 solid;
+}
+/* line 148, ../sass/style.scss */
+.con-demoheader .header .right-b {
+  border-left: 1px #d7e3f0 solid;
+}
+/* line 151, ../sass/style.scss */
+.con-demoheader .header .left-b:before {
+  background: url("../../images/nav-2.png") no-repeat center;
+}
+/* line 154, ../sass/style.scss */
+.con-demoheader .header .right-b:before {
+  background: url("../../images/nav-5.png") no-repeat center;
+}
+/* line 157, ../sass/style.scss */
+.con-demoheader .header.box1 .center-area {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  width: 20%;
+  /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+/* line 158, ../sass/style.scss */
+.con-demoheader .header .center-area {
+  padding: 0.7rem 1rem;
+}
+/* line 160, ../sass/style.scss */
+.con-demoheader .header .center-area input[type=text] {
+  width: 100%;
+  height: 3rem;
+  padding: 0 1rem;
+}
+
+/**
+ * 4 Bubble 
+ */
+/* line 181, ../sass/style.scss */
+.con-demobubble .bubble {
+  min-width: 20%;
+  max-width: 70%;
+  min-height: 4rem;
+  display: block;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  border-radius: 1.5rem;
+  background: #C9EC74;
+  position: absolute;
+  /*	    top: 6rem;
+  	    left: 2rem;*/
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+/* line 195, ../sass/style.scss */
+.con-demobubble .bubble.arrow-b:after, .con-demobubble .bubble.arrow-t:before, .con-demobubble .bubble.arrow-l:before, .con-demobubble .bubble.arrow-r:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+/* line 202, ../sass/style.scss */
+.con-demobubble .bubble.arrow-t:before {
+  border-width: 0 1rem 1rem;
+  border-color: #C9EC74 transparent;
+  top: -1rem;
+  left: 47px;
+}
+/* line 208, ../sass/style.scss */
+.con-demobubble .bubble.arrow-b:after {
+  border-width: 1rem 1rem 0;
+  border-color: #C9EC74 transparent;
+  bottom: -1rem;
+  left: 47px;
+}
+/* line 214, ../sass/style.scss */
+.con-demobubble .bubble.arrow-l:before {
+  border-width: 1rem 2rem 1rem 0;
+  border-color: transparent #C9EC74;
+  top: 1rem;
+  left: -1rem;
+}
+/* line 220, ../sass/style.scss */
+.con-demobubble .bubble.arrow-r:after {
+  border-width: 1rem 0 1rem 2rem;
+  border-color: transparent #C9EC74;
+  bottom: 1rem;
+  right: -1rem;
+}
+
+/**
+* 5 Pie & Finger
+*/
+/* line 233, ../sass/style.scss */
+.con-demopie {
+  padding-top: 4rem;
+  background-color: #AEADD0;
+  width: 100%;
+  height: 100%;
+  /*------- 1 --------*/
+  /*------- 2 --------*/
+  /*------- 3 --------*/
+}
+/* line 238, ../sass/style.scss */
+.con-demopie .pie {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  left: 150px;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+/* line 246, ../sass/style.scss */
+.con-demopie .pie.big {
+  width: 200px;
+  height: 200px;
+  left: 50px;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+/* line 252, ../sass/style.scss */
+.con-demopie .pie:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  left: -100px;
+  border-radius: 100px 0 0 100px;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  -o-transform-origin: right center;
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+/* line 261, ../sass/style.scss */
+.con-demopie .pie.big:before {
+  left: 0px;
+}
+/* line 264, ../sass/style.scss */
+.con-demopie .pie.big:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  left: 100px;
+  border-radius: 0 100px 100px 0;
+}
+/* line 272, ../sass/style.scss */
+.con-demopie .pie:nth-of-type(1):before, .con-demopie .pie:nth-of-type(1):after {
+  background-color: blue;
+}
+/* line 275, ../sass/style.scss */
+.con-demopie .pie:nth-of-type(2):before, .con-demopie .pie:nth-of-type(2):after {
+  background-color: green;
+}
+/* line 278, ../sass/style.scss */
+.con-demopie .pie:nth-of-type(3):before, .con-demopie .pie:nth-of-type(3):after {
+  background-color: red;
+}
+/* line 281, ../sass/style.scss */
+.con-demopie .pie:nth-of-type(4):before, .con-demopie .pie:nth-of-type(4):after {
+  background-color: yellow;
+}
+/* line 285, ../sass/style.scss */
+.con-demopie .pie[data-start="30"] {
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+/* line 288, ../sass/style.scss */
+.con-demopie .pie[data-value="30"]:before {
+  -moz-transform: rotate(31deg);
+  -ms-transform: rotate(31deg);
+  -webkit-transform: rotate(31deg);
+  -o-transform: rotate(31deg);
+  transform: rotate(31deg);
+}
+/* line 292, ../sass/style.scss */
+.con-demopie .pie[data-start="60"] {
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+/* line 295, ../sass/style.scss */
+.con-demopie .pie[data-value="40"]:before {
+  -moz-transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
+  -webkit-transform: rotate(41deg);
+  -o-transform: rotate(41deg);
+  transform: rotate(41deg);
+}
+/* line 299, ../sass/style.scss */
+.con-demopie .pie[data-start="100"] {
+  -moz-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  -webkit-transform: rotate(100deg);
+  -o-transform: rotate(100deg);
+  transform: rotate(100deg);
+}
+/* line 302, ../sass/style.scss */
+.con-demopie .pie[data-value="260"]:before {
+  -moz-transform: rotate(260deg);
+  -ms-transform: rotate(260deg);
+  -webkit-transform: rotate(260deg);
+  -o-transform: rotate(260deg);
+  transform: rotate(260deg);
+}
+/* line 306, ../sass/style.scss */
+.con-demopie .touch-finger {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  -moz-box-shadow: 0px 0px 5px #fff inset;
+  -webkit-box-shadow: 0px 0px 5px #fff inset;
+  box-shadow: 0px 0px 5px #fff inset;
+  border: #ccc solid 1px;
+  -moz-box-shadow: 0px 0px 5px #fff;
+  -webkit-box-shadow: 0px 0px 5px #fff;
+  box-shadow: 0px 0px 5px #fff;
+  position: absolute;
+  opacity: 0.0;
+  z-index: 99999;
+  pointer-events: none;
+}
