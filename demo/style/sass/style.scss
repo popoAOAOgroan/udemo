@@ -1,3 +1,5 @@
+
+@import "global-img";
 @import "reset";
 @import "global";
 @import "animate";
@@ -5,6 +7,7 @@
 /**
  * 0 List 
  */
+
 .con-list{
 	li{
 		@include flex-display;
@@ -86,6 +89,8 @@
 /**
  * 3 Header 
  */
+
+ /*@include  all-global-img-sprites;  */
  .con-demoheader{
  	background: #A8ACB9;
     height: 100%;
@@ -137,10 +142,13 @@
  			background: $nav-light-color;
  		}
  		.left-b:before, .right-b:before{
+ 			$header-imgw: global-img-sprite-width('nav-2');
+ 			$header-imgh: global-img-sprite-height('nav-2');
  			content: "";
  			display: inline-block;
- 			width: inherit;
- 			height: inherit;
+ 			width: $header-imgw;
+ 			height: $header-imgh;
+ 			margin: auto;
  		}
  		.left-b{
  			border-right: 1px $demoborcolor solid;
@@ -149,10 +157,12 @@
  			border-left: 1px $demoborcolor solid;
  		}
  		.left-b:before{
- 			background: url('../../images/nav-2.png') no-repeat center;
+ 			@include global-img-sprite(nav-2)
+ 			/*background: url('../../images/nav-2.png') no-repeat center;*/
  		}
  		.right-b:before{
- 			background: url('../../images/nav-5.png') no-repeat center;;
+ 			@include global-img-sprite(nav-5)
+ 			/*background: url('../../images/nav-5.png') no-repeat center;;*/
  		}
  		&.box1 .center-area{@include flex(1);}
  		.center-area{
@@ -304,8 +314,8 @@
  	}
 
  	.touch-finger{
- 		width: 2rem; 
- 		height: 2rem; 
+ 		width: 3rem;  
+ 		height: 3rem;  
  		background-color: rgba(0,0,0,0.3);
  		border-radius: 1rem;
  		-moz-box-shadow:0px 0px 5px #fff inset;              
@@ -321,3 +331,42 @@
 	    pointer-events: none;
  	}
  } 
+
+
+ /**
+ * 6 Retina
+ */
+
+.con-demoretina{
+	.img1x,.img2x{float: left;width: 50%;}
+	p{text-align: center;}
+	span{
+		width: 94px;
+		height: 94px;
+		display: block;
+		margin: 1rem 0 0 3rem;
+	}
+	.img1x{
+		span{background-image:sprite-url($demo-map1x);}
+		.img-re{
+ 			background-position: sprite-position($demo-map1x, demo-re);
+		}
+		.img-hb{
+ 			background-position: sprite-position($demo-map1x, demo-hb);
+		}
+		.img-tq{
+ 			background-position: sprite-position($demo-map1x, demo-tq);
+		}
+	}
+	.img2x{
+		.img-re{
+ 			@include image-set(demo-re); 
+		}
+		.img-hb{
+ 			@include image-set(demo-hb);
+		}
+		.img-tq{
+ 			@include image-set(demo-tq); 
+		}
+	}
+}

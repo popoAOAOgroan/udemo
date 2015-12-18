@@ -123,3 +123,14 @@ button{
 	-o-transform: rotate($deg);
 	transform: rotate($deg);
 }
+
+/* image-set */
+$demo-map1x: sprite-map("img1x/*.png");
+$demo-map2x: sprite-map("img2x/*.png"); 
+@mixin image-set ($name) {
+  	background-position: sprite-position($demo-map1x, $name);
+  	/*background: sprite-url($demo-map1x);*/
+  	background-image: -webkit-image-set(sprite-url($demo-map1x) 1x, sprite-url($demo-map2x) 2x);
+  	background-image: -moz-image-set(sprite-url($demo-map1x) 1x, sprite-url($demo-map2x) 2x);
+  	background-image: -ms-image-set(sprite-url($demo-map1x) 1x, sprite-url($demo-map2x) 2x);
+  }

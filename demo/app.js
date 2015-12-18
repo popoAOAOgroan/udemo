@@ -13,6 +13,8 @@ angular.module('myApp', [
   'myApp.demo_header',
   'myApp.demo_bubble',
   'myApp.demo_pie',
+  'myApp.demo_retina',
+
 ])
 
 .config(['$routeProvider', function($routeProvider) {
