@@ -94,6 +94,8 @@ module.exports = function(grunt) {
   	// grunt.registerTask('compressjs',['concat','jshint','uglify']);
   	// grunt.registerTask('watchit',['sass','concat','jshint','uglify','connect','watch']);
 	grunt.registerTask('default',['compass']); //css compass
-  	grunt.registerTask('minimg',['imagemin']); //图片优化
   	grunt.registerTask('dev',['watch']); //监控&刷新
+
+  	
+  	grunt.registerTask('minimg',['imagemin']); //图片优化
 };

@@ -27,9 +27,14 @@ angular.module('myApp', [
 // }])
 
 .controller('MainCtrl',['$scope','ngProgressFactory', function($scope,ngProgressFactory) {
+  //loading
   $scope.progressbar = ngProgressFactory.createInstance();
   $scope.progressbar.start();
-
+  //主界面
+  $scope.displayBtnVar = true;
+  $scope.$on("MainCtrDisplayBtnChange", function (event, isdisplay) {
+    $scope.displayBtnVar = isdisplay;
+  });
   $scope.UDemo = 'UDemo';
   $scope.$on("MainCtrNameChange", function (event, name) {
     // console.log("parent", name);

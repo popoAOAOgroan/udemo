@@ -12,11 +12,17 @@
 .controller('listCtrl',['$scope',function($scope) {
 	$scope.$emit("MainCtrNameChange", 'Demo');
 
-	$('.con-list li').click(function(){
-		$('.back').css('display','block');
-	})
-	$('.back').click(function(){
-		$('.back').css('display','none');
-	})
-}]);
 
+	$scope.list = [
+		{name: 'Nav', url: '#/demo_nav'},
+		{name: 'Map', url: '#/demo_map'},
+		{name: 'Header', url: '#/demo_header'},
+		{name: 'Bubble', url: '#/demo_bubble'},
+		{name: 'Pie & Finger', url: '#/demo_pie'},
+		{name: 'Retina', url: '#/demo_retina'},
+	];
+
+	$scope.displayBtn = function(){
+		$scope.$emit("MainCtrDisplayBtnChange", false);
+	};
+}]);

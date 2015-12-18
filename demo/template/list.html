@@ -1,7 +1,13 @@
 <div class="con-list  goback goinside">
 
 	<ul>
-	  <li>
+		<li ng-repeat='item in list'>
+			<a href={{item.url}} ng-click='displayBtn()'>
+				<span>{{$index + 1}}.</span>
+				<p>{{item.name}}</p>
+			</a>
+		</li>
+<!-- 	  <li>
 	  	<a href="#/demo_nav">
 	  		<span>01.</span>
 	  		<p> Nav</p>
@@ -36,6 +42,6 @@
 	  		<span>06.</span>
 	  		<p> Retina</p>
 	  	</a>
-	  </li>
+	  </li> -->
 	</ul>
 </div>

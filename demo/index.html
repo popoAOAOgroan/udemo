@@ -22,7 +22,7 @@
 </head>
   <body>
   <header>
-    <a href="#/list" class="back" style="display:none;"></a>
+    <a href="#/list" class="back" ng-hide = 'displayBtnVar' ng-click = 'displayBtnVar = true'></a>
     <p>{{UDemo}}</p>
   </header>
   <div ng-view class="ng-scope u-content "></div>

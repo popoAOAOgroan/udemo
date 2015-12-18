@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** vertical /diagonal **/
 /* line 56, global-img/*.png */
 .global-img-sprite, .con-demoheader .header .left-b:before, .con-demoheader .header .right-b:before {
@@ -204,7 +205,8 @@ header p {
   padding-top: 5rem;
   /*position: relative;*/
   z-index: 1;
-  overflow: hidden;
+  /*overflow:hidden;*/
+  /*鏃犳硶婊戝姩*/
 }
 
 /* line 69, ../sass/_global.scss */
