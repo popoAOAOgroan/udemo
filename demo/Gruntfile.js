@@ -11,7 +11,9 @@ module.exports = function(grunt) {
 	                sassDir: 'style/sass',
 	                cssDir : 'style/css',
 	                imagesPath: 'images',
-	                imagesDir: 'demo/images',
+	                imagesDir: '../demo/images',
+	                // httpPath: 'demo',
+	                // generatedImagesDir: 'demo/images',
 	                // httpGeneratedImagesPath: 'https://127.0.0.1/demo/images',
 	                // environment: 'development',
 	                // outputStyle: 'compressed', //压缩css

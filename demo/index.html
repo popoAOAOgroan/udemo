@@ -21,9 +21,22 @@
   <title>UDemo</title>
 </head>
   <body>
-  <header>
+<!--   <header>
     <a href="#/list" class="back" ng-hide = 'displayBtnVar' ng-click = 'displayBtnVar = true'></a>
     <p>{{UDemo}}</p>
+    <a href="#/search" class="search" ng-click = ''></a>
+  </header> -->
+  <header class="header flex-box box1">
+    <div class="left-side">
+      <a ng-href="#/list" class="left-b back" ng-hide = 'displayBackBtnVar' ng-click = 'displayBackBtnVar = true;displaySearchBtnVar = false;displayInputVar = true;'></a>
+    </div>
+    <div class="center-area">
+      <p ng-hide = '!displayInputVar'>{{UDemo}}</p>
+      <input type="text" ng-model = 'query' ng-hide = 'displayInputVar' value={{query}}>
+    </div>
+    <div class="right-side" >
+      <a ng-href="#/search" class="right-b search" ng-hide = 'displaySearchBtnVar' ng-click = "displayBackBtnVar = false;displayInputVar = false; EmailQuery(); query ='' "></a>
+    </div>
   </header>
   <div ng-view class="ng-scope u-content "></div>
 
@@ -39,6 +52,7 @@
   <script src="bower_components/BaiduMapForAngularJS/baiduMap.js"></script>
   <script src="app.js"></script>
   <script src="controller/list.js"></script>
+  <script src="controller/search.js"></script>
   <script src="controller/demo_nav.js"></script>
   <script src="controller/demo_map.js"></script>
   <script src="controller/demo_header.js"></script>

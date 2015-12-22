@@ -1,0 +1,11 @@
+<div class="con-search">
+	<ul ><!-- ng-hide = 'listDisplayVar' -->
+		<li ng-repeat="item in list | filter:query | orderBy:'time':true">
+			<a href={{item.url}} ng-click='displayBtn()'>
+				<span>{{$index + 1}}.</span>
+				<p>{{item.name}}</p>
+				<i>{{item.time}}</i>
+			</a>
+		</li>
+	</ul>
+</div>

@@ -9,18 +9,12 @@
   });
 }])
  
-.controller('listCtrl',['$scope',function($scope) {
+.controller('listCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.$emit("MainCtrNameChange", 'Demo');
 
-
-	$scope.list = [
-		{name: 'Nav', url: '#/demo_nav'},
-		{name: 'Map', url: '#/demo_map'},
-		{name: 'Header', url: '#/demo_header'},
-		{name: 'Bubble', url: '#/demo_bubble'},
-		{name: 'Pie & Finger', url: '#/demo_pie'},
-		{name: 'Retina', url: '#/demo_retina'},
-	];
+　	$http.get('../demo/json/records.json').success(function(data){
+		$scope.list = data.records;
+	});
 
 	$scope.displayBtn = function(){
 		$scope.$emit("MainCtrDisplayBtnChange", false);

@@ -8,6 +8,7 @@ angular.module('myApp', [
   'ngProgress',
   'baiduMap',
   'myApp.list',
+  'myApp.search',
   'myApp.demo_nav',
   'myApp.demo_map',
   'myApp.demo_header',
@@ -31,13 +32,24 @@ angular.module('myApp', [
   $scope.progressbar = ngProgressFactory.createInstance();
   $scope.progressbar.start();
   //主界面
-  $scope.displayBtnVar = true;
+  $scope.displayBackBtnVar = true;
+  $scope.displaySearchBtnVar = false;
+  $scope.displayInputVar = true;
   $scope.$on("MainCtrDisplayBtnChange", function (event, isdisplay) {
-    $scope.displayBtnVar = isdisplay;
+    $scope.displayBackBtnVar = isdisplay;
+    $scope.displaySearchBtnVar = !isdisplay;
   });
   $scope.UDemo = 'UDemo';
   $scope.$on("MainCtrNameChange", function (event, name) {
     // console.log("parent", name);
     $scope.UDemo = name;
   });
+  
+  $scope.EmailQuery = function() {
+    if($scope.query){
+      console.log("jinqu??" + $scope.query);
+      $scope.$broadcast("SearchQuery", $scope.query);
+    }
+  }
+
 }]);

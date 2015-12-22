@@ -14,57 +14,6 @@ $line-color: #d7e3f0;
 
 $zindex-nav: 999;
 
-html{height: 100%;font-size: 10px;}
-body{
- 	height: 100%; 
- 	font-size: 2rem;
-}
-
-$hheader: 5rem;
-header{
-	width: 100%;
-	height: $hheader;
-	background: #f6fafe;
-	border-top: 2px solid #fdfeff;
-	border-bottom: 1px solid $line-color;
-	color: $text-color;
-	position: fixed;
-	top: 0px;
-	z-index: $zindex-nav;
-	.back{
-		width: $hheader;
-		height: $hheader;
-		display: inline-block;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		background: url('../../images/back.png') no-repeat;
-		background-position: center;
-		background-size: 50%;
-	}
-	p{
-		height: 100%;
-		width: 100%;
-		text-align: center;
-		line-height: $hheader;
-		font-weight: bold;
-	}
-}
-
-.u-content{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	padding-top: $hheader;
-	/*position: relative;*/
-	z-index: 1;
-	/*overflow:hidden;*/ /*无法滑动*/
-}
-
 
 button{
 	width:8rem;
@@ -133,4 +82,114 @@ $demo-map2x: sprite-map("img2x/*.png");
   	background-image: -webkit-image-set(sprite-url($demo-map1x) 1x, sprite-url($demo-map2x) 2x);
   	background-image: -moz-image-set(sprite-url($demo-map1x) 1x, sprite-url($demo-map2x) 2x);
   	background-image: -ms-image-set(sprite-url($demo-map1x) 1x, sprite-url($demo-map2x) 2x);
+}
+
+
+html{height: 100%;font-size: 10px;}
+body{
+ 	height: 100%; 
+ 	font-size: 2rem;
+}
+
+$hheader: 5rem;
+
+header{
+	width: 100%;
+	height: $hheader;
+	background: #f6fafe;
+	border-top: 2px solid #fdfeff;
+	border-bottom: 1px solid $line-color;
+	color: $text-color;
+	position: fixed;
+	top: 0px;
+	z-index: $zindex-nav;
+	text-align: center;
+
+ 	&.flex-box{
+		@include flex-display;
+		justify-content:space-between; 
+ 	}
+	p{
+		width: auto;
+		height: inherit;
+		line-height: 3rem;
+		display: inline-block;
+    	font-weight: bolder;
+	}
+	.left-side, .right-side{
+		width: $hheader * 1.2;
+		height: 100%;
+	}
+	.left-side{
+		float: left;
+	}
+	.right-side{
+		float: right;
+	}
+	.left-b, .right-b{
+		display: inline-block; 
+		width: inherit;
+		height: inherit;
+		background: none;
+		border: 0px;
+		outline: none;
+		padding: 0px;
+		transition: all 200ms ease-out;
+		@include flex-display;
+	}
+	.left-b:active , .right-b:active{
+		background: $nav-dark-color;
+	}
+	.left-b:before, .right-b:before{
+/*		$header-imgw: global-img-sprite-width('nav-2');
+		$header-imgh: global-img-sprite-height('nav-2');*/
+		content: "";
+		display: inline-block;
+/*		width: $header-imgw;
+		height: $header-imgh;*/
+		margin: auto;
+	}
+	.left-b:before{
+		$header-backw: image-sprite-width('back');
+		$header-backh: image-sprite-height('back');
+		width: $header-backw;
+		height: $header-backh;
+		@include image-sprite('back');
+		/*background: url('../../images/nav-2.png') no-repeat center;*/
+	}
+	.right-b:before{
+		$header-searchw: image-sprite-width('search');
+		$header-searchh: image-sprite-height('search');
+		width: $header-searchw;
+		height: $header-searchh;
+		@include image-sprite('search');
+		/*background: url('../../images/nav-5.png') no-repeat center;;*/
+	}
+	&.box1 .center-area{@include flex(1);}
+	.center-area{
+		height: 100%;
+		padding: 1rem 0;
+		input[type=text]{
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			padding: 0 1rem;
+			border-radius: 0.8rem;
+			outline: none;
+		}
+	}
+}
+
+.u-content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding-top: $hheader;
+	/*position: relative;*/
+	z-index: 1;
+	/*overflow:hidden;*/ /*无法滑动*/
 }

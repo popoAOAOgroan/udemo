@@ -1,14 +1,15 @@
 
 @import "global-img";
+@import "image";
 @import "reset";
-@import "global";
+@import "global";  
 @import "animate";
 
 /**
- * 0 List 
- */
-
-.con-list{
+ * 0 List & serach
+ */ 
+  
+.con-list, .con-search{ 
 	li{
 		@include flex-display;
 		$hli:6.5rem;
@@ -29,7 +30,7 @@
 			border-right: dashed 2px $line-color; 
 			text-align: center;
 			color: $text-dark-color;
-			text-shadow: 1px 1px #bbb;
+			text-shadow: 1px 1px #C4D0FF;
 		}
 		span:before{
 			$ws-a: 1rem;
@@ -48,7 +49,26 @@
 			display: inline-block;
 			padding: 0 1rem;
 		}
+		i{
+			display: inline-block;
+			float: right;
+			font-size: 0.8rem; 
+			padding: 0 1rem 0 0;
+			color: #8E8E8E;
+		}
 	}
+}
+
+.con-search {
+	/*padding: 0.5rem;
+	text-align: center;
+	input{
+		padding: 0.5rem;
+		width: 100%;
+		height: 3rem;
+		border-radius: 1rem;
+
+	}*/
 }
 
 
@@ -155,7 +175,7 @@
 		}
  		.right-b{
  			border-left: 1px $demoborcolor solid;
- 		}
+ 		} 
  		.left-b:before{
  			@include global-img-sprite(nav-2)
  			/*background: url('../../images/nav-2.png') no-repeat center;*/
@@ -358,7 +378,7 @@
  			background-position: sprite-position($demo-map1x, demo-tq);
 		}
 	}
-	.img2x{
+	.img2x{ 
 		.img-re{
  			@include image-set(demo-re); 
 		}
