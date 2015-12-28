@@ -1,3 +1,5 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lobster&effect=3d&text=UDemo);
 /**
  * 2.0 Global
  *
@@ -110,11 +112,15 @@ header{
 		justify-content:space-between; 
  	}
 	p{
+		/*@extend ;*/
+		font-size: 3rem;
 		width: auto;
 		height: inherit;
 		line-height: 3rem;
 		display: inline-block;
-    	font-weight: bolder;
+    	/*font-weight: bolder;*/
+    	font-family: 'Lobster', cursive;
+    	letter-spacing: 0.2rem;
 	}
 	.left-side, .right-side{
 		width: $hheader * 1.2;

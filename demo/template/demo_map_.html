@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+
 <!-- ios保存至桌面设置 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon-precomposed" href="touch-icon-iphone-retina.png" />
-  <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
-<!-- css -->
-  <link rel="stylesheet" href="../style/css/style.css">
+  <meta name="App-Config" content="fullscreen=no,useHistoryState=yes,transition=no">
 
 <style type="text/css">
 .log{
@@ -25,41 +22,37 @@
   background: #F5F5F5;
 }
 </style>
-<!-- 标题党 -->
-  <title>UMap</title>
+
+<!-- 标题 -->
+<title>UMap</title>
 </head>
   <body>
   <header>
-    <a href="#/list" class="back" style="display:none"></a>
     <p>Map</p>
   </header>
   <div class="u-content">
     <div class="con-demomap">
       <baidu-map options="mapOptions" id="baidumap" style="width: 100%; height: 300px;display: block; background:#ccc"></baidu-map>
 
-      <div>
+      <!-- <div>
         <input type="text" class="seachinput" placeholder="搜索附近的商家"/>
         <input type="button" value="Get" class="seachbtn" onclick="goseach()"/>
         <div id="log"></div>
-      </div>
+      </div> -->
 
     </div>
   </div>
 
   <!-- JS -->
   <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/bouncefix.js/dist/bouncefix.js"></script>
   <script src="../controller/demo_map_.js"></script>
 
    <!-- baidu API http://
-  <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script> -->
-  <script type="text/javascript" name="baidu-tc-cerfication" data-appid="7362600" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+  <script type="text/javascript" name="baidu-tc-cerfication" data-appid="7362600" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script> -->
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=41YqEkDn62PsEnDBmT5BAGlc"></script>
   <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
-  <!-- fix content -->
-  <script type="text/javascript">
-    bouncefix.add('u-content');
-  </script>
+
   <!-- JS End -->
   </body>
 </html>

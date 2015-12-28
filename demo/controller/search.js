@@ -19,7 +19,6 @@
 	$scope.query = "sobudaosobudao";
 
 	$scope.$on("SearchQuery", function (event, query) {
-    	console.log("yi??" + query);
 	    $scope.query = query;
 	});
 	

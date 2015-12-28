@@ -28,5 +28,15 @@
 			"name" : "Retina",
 			"url" : "#/demo_retina",
 			"time" : "2015/12"
+		},
+		{
+			"name" : "Multi Step",
+			"url" : "#/demo_multistep",
+			"time" : "2015/12"
+		},
+		{
+			"name" : "iframe",
+			"url" : "#/demo_iframe",
+			"time" : "2015/12"
 		}
 ]}

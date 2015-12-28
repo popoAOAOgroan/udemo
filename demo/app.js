@@ -15,7 +15,8 @@ angular.module('myApp', [
   'myApp.demo_bubble',
   'myApp.demo_pie',
   'myApp.demo_retina',
-
+  'myApp.demo_multistep',
+  'myApp.demo_iframe',
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -43,6 +44,11 @@ angular.module('myApp', [
   $scope.$on("MainCtrNameChange", function (event, name) {
     // console.log("parent", name);
     $scope.UDemo = name;
+    if (name == 'Demo') {
+      $scope.fontEffect = 'font-effect-3d';
+    }else{
+      $scope.fontEffect = '';
+    };
   });
   
   $scope.EmailQuery = function() {

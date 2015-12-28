@@ -26,9 +26,9 @@ $(function () {
 });
 
 
-function locationSuccess(point, AddressComponent){
-    alert('jin');
-}
+// function locationSuccess(point, AddressComponent){
+
+// }
 
 var map;
 function translatePoint(longitude, latitude){
@@ -55,43 +55,43 @@ function initMap(point) {
     
 }  
 
-function searchCurrent(address){
+// function searchCurrent(address){
 
-    var options = {      
-        onSearchComplete: function(results){      
-            if (local.getStatus() == BMAP_STATUS_SUCCESS){      
-                // 判断状态是否正确      
-                var s = [];      
-                for (var i = 0; i < results.getCurrentNumPois(); i ++){      
-                    s.push("<div class='log-d'>"+results.getPoi(i).title + " - " + results.getPoi(i).address +"<input type='button' value='Go' onclick='searchTransit()'/> </div>");      
-                }      
-                document.getElementById("log").innerHTML = s;      
-            }      
-        },
-        renderOptions:{map: map}   
-    };      
-    var local = new BMap.LocalSearch(map, options);   
-    // var local = new BMap.LocalSearch(map, {      
-    //       renderOptions:{map: map}      
-    // });      
-    local.searchInBounds(address,map.getBounds());
-}
+//     var options = {      
+//         onSearchComplete: function(results){      
+//             if (local.getStatus() == BMAP_STATUS_SUCCESS){      
+//                 // 判断状态是否正确      
+//                 var s = [];      
+//                 for (var i = 0; i < results.getCurrentNumPois(); i ++){      
+//                     s.push("<div class='log-d'>"+results.getPoi(i).title + " - " + results.getPoi(i).address +"<input type='button' value='Go' onclick='searchTransit()'/> </div>");      
+//                 }      
+//                 document.getElementById("log").innerHTML = s;      
+//             }      
+//         },
+//         renderOptions:{map: map}   
+//     };      
+//     var local = new BMap.LocalSearch(map, options);   
+//     // var local = new BMap.LocalSearch(map, {      
+//     //       renderOptions:{map: map}      
+//     // });      
+//     local.searchInBounds(address,map.getBounds());
+// }
 
 
-function goseach(){
-    console.log($('.seachinput').val())
-    if($('.seachinput').val()){
-        searchCurrent($('.seachinput').val());
-    }
-}
+// function goseach(){
+//     console.log($('.seachinput').val())
+//     if($('.seachinput').val()){
+//         searchCurrent($('.seachinput').val());
+//     }
+// }
 
-function searchTransit(){
-    // alert('a');
-    var transit = new BMap.TransitRoute(map, {    
-        renderOptions: {map: map, panel: "log"}    
-    });    
-    transit.search("国定路69号", map.getBounds());
-}
+// function searchTransit(){
+//     // alert('a');
+//     var transit = new BMap.TransitRoute(map, {    
+//         renderOptions: {map: map, panel: "log"}    
+//     });    
+//     transit.search("国定路69号", map.getBounds());
+// }
 
     // var map = new BMap.Map("baidumap");          // 创建地图实例  
     // var point = new BMap.Point(116.404, 39.915);  // 创建点坐标  
