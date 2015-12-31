@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /** vertical /diagonal **/
-@import url(http://fonts.googleapis.com/css?family=Lobster&effect=3d&text=UDemo);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 /* line 56, global-img/*.png */
 .global-img-sprite, .con-demoheader .header .left-b:before, .con-demoheader .header .right-b:before {
   background-image: url('/../demo/images/global-img-sd958f7a1d5.png');
@@ -151,6 +151,7 @@ body {
   background-color: black;
 }
 
+/*&effect=3d&text=UDemo*/
 /**
  * 2.0 Global
  *
@@ -313,19 +314,26 @@ header .center-area input[type=text] {
 }
 
 /* line 189, ../sass/_global.scss */
-.u-content {
-  width: 100%;
-  height: 100%;
+.animation-box {
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
+  /*overflow: hidden;*/
+}
+/* line 197, ../sass/_global.scss */
+.animation-box .u-content {
+  width: 414px;
+  height: 100%;
   padding-top: 5rem;
-  /*position: relative;*/
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
   /*overflow:hidden;*/
   /*鏃犳硶婊戝姩*/
+  float: left;
 }
 
 /**
@@ -334,7 +342,6 @@ header .center-area input[type=text] {
  * ----------------------------------------------------------------------------
  */
 /* Transform */
-/* slide out from the left & right */
 @keyframes slideOutLeft {
   to {
     -webkit-transform: translateX(-100%);
@@ -353,25 +360,6 @@ header .center-area input[type=text] {
     transform: translateX(-100%);
   }
 }
-@keyframes slideOutRight {
-  to {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-@-webkit-keyframes slideOutRight {
-  to {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-/* slide in from the right */
 @keyframes slideInRight {
   from {
     -webkit-transform: translateX(100%);
@@ -404,6 +392,76 @@ header .center-area input[type=text] {
     transform: translateX(0);
   }
 }
+@keyframes slideOutRight {
+  to {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes slideOutRight {
+  to {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes inLeftOutRight {
+  to {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes inLeftOutRight {
+  to {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
 /* appear */
 @-webkit-keyframes inopacity {
   from {
@@ -422,21 +480,46 @@ header .center-area input[type=text] {
     opacity: 0.0;
   }
 }
-/* line 64, ../sass/_animate.scss */
+/* line 80, ../sass/_animate.scss */
 .ng-enter {
-  /*animation: slideInRight 0.5s both ease-in; */
+  /*animation: slideInRight 0.5s both ease-out; */
   /*-webkit-transition: all 1s ease-out;*/
-  animation: inopacity 0.5s both ease-in;
+  /*animation: inopacity 0.5s both ease-in; */
+  /*z-index: 88;  */
+}
+
+/* line 87, ../sass/_animate.scss */
+.rightin.ng-enter {
+  animation: slideInRight 0.3s both ease-out;
+  z-index: 99;
+}
+
+/* line 92, ../sass/_animate.scss */
+.rightin.ng-leave {
+  animation: slideOutLeft 0.3s both ease-out;
   z-index: 88;
 }
 
-/* line 70, ../sass/_animate.scss */
+/* line 97, ../sass/_animate.scss */
+.leftin.ng-enter {
+  animation: slideInLeft 0.3s both ease-out;
+  z-index: 99;
+}
+
+/* line 102, ../sass/_animate.scss */
+.leftin.ng-leave {
+  /*涓存椂*/
+  animation: inLeftOutRight 0.3s both ease-out;
+  z-index: 88;
+}
+
+/* line 107, ../sass/_animate.scss */
 .ng-leave {
   /*&.goback{*/
-  /*animation: slideOutLeft 0.5s both ease-in; */
-  animation: Outopacity 0.5s both ease-put;
+  /*animation: slideOutLeft 0.5s both ease-out; */
+  /*animation: Outopacity 0.5s both ease-put; */
   /*-webkit-transition: all 1s ease-in; */
-  z-index: 99;
+  /*z-index: 99; */
   /*  }
     &.goinside{
       animation: slideOutRight 0.5s both ease-in; 
@@ -517,7 +600,7 @@ header .center-area input[type=text] {
     transform: scale(2.5, 2.5);
   }
 }
-/* line 104, ../sass/_animate.scss */
+/* line 141, ../sass/_animate.scss */
 .touch-finger-animation {
   animation: finger 0.3s forwards ease-in;
   -moz-animation: finger 0.3s forwards ease-in;
@@ -1122,4 +1205,31 @@ footer .active {
   width: inherit;
   height: inherit;
   border: none;
+}
+
+/**
+ * 9 DJ list
+ */
+/* line 467, ../sass/style.scss */
+.con-demodjlist {
+  width: 100%;
+  height: 100%;
+}
+/* line 470, ../sass/style.scss */
+.con-demodjlist ul {
+  width: inherit;
+}
+/* line 472, ../sass/style.scss */
+.con-demodjlist ul li {
+  width: inherit;
+  height: 8rem;
+  line-height: 8rem;
+  border-bottom: 1px solid #EFEFEF;
+  border-top: 1px solid #F7F7F7;
+  padding: 0 0 0 2rem;
+  transition: background 500ms;
+}
+/* line 481, ../sass/style.scss */
+.con-demodjlist ul li:active {
+  background: #DADADA;
 }

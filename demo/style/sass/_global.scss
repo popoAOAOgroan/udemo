@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=Lobster&effect=3d&text=UDemo);
+@import url(http://fonts.googleapis.com/css?family=Lobster);/*&effect=3d&text=UDemo*/
 /**
  * 2.0 Global
  *
@@ -186,16 +186,24 @@ header{
 	}
 }
 
-.u-content{
-	width: 100%;
-	height: 100%;
+.animation-box{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	padding-top: $hheader;
-	/*position: relative;*/
-	z-index: 1;
-	/*overflow:hidden;*/ /*无法滑动*/
+	/*overflow: hidden;*/
+
+	.u-content{
+		width: 414px;
+		height: 100%;
+		padding-top: $hheader;
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: 1;
+		/*overflow:hidden;*/ /*无法滑动*/
+		float: left;
+	}
 }
+

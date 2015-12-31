@@ -17,6 +17,7 @@ angular.module('myApp', [
   'myApp.demo_retina',
   'myApp.demo_multistep',
   'myApp.demo_iframe',
+  'myApp.demo_djlist',
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -36,6 +37,7 @@ angular.module('myApp', [
   $scope.displayBackBtnVar = true;
   $scope.displaySearchBtnVar = false;
   $scope.displayInputVar = true;
+  $scope.animationcClass = 'rightin';
   $scope.$on("MainCtrDisplayBtnChange", function (event, isdisplay) {
     $scope.displayBackBtnVar = isdisplay;
     $scope.displaySearchBtnVar = !isdisplay;
@@ -43,11 +45,13 @@ angular.module('myApp', [
   $scope.UDemo = 'UDemo';
   $scope.$on("MainCtrNameChange", function (event, name) {
     // console.log("parent", name);
+    // $scope.animationcClass = 'rightin';
     $scope.UDemo = name;
     if (name == 'Demo') {
       $scope.fontEffect = 'font-effect-3d';
     }else{
       $scope.fontEffect = '';
+      $scope.animationcClass = 'rightin';
     };
   });
   
@@ -58,4 +62,4 @@ angular.module('myApp', [
     }
   }
 
-}]);
+}])

@@ -458,3 +458,28 @@
 		border:none;
 	}
 }
+
+
+/**
+ * 9 DJ list
+ */
+
+.con-demodjlist{
+	width: 100%;
+	height: 100%;
+	ul{
+		width: inherit;
+		li{
+			width: inherit;
+			height: 8rem;
+			line-height: 8rem;
+			border-bottom: 1px solid #EFEFEF;
+			border-top: 1px solid #F7F7F7;
+			padding: 0 0 0 2rem;
+			transition: background 500ms;
+		}
+		li:active{
+			background: #DADADA;
+		}
+	}
+}

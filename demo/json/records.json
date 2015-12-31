@@ -38,5 +38,10 @@
 			"name" : "iframe",
 			"url" : "#/demo_iframe",
 			"time" : "2015/12"
+		},
+		{
+			"name" : "Multiple-list[DJ]",
+			"url" : "#/demo_djlist",
+			"time" : "2015/12"
 		}
 ]}

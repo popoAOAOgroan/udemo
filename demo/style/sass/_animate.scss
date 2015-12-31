@@ -21,7 +21,6 @@
     transform: scale($x,$y);
 }
 
-/* slide out from the left & right */
 @keyframes slideOutLeft {
     to      { @include transformX(-100%); }
 }
@@ -30,15 +29,6 @@
     to      { @include transformX(-100%); }
 }
 
-@keyframes slideOutRight {
-    to      { @include transformX(100%); }
-}
-
-@-webkit-keyframes slideOutRight {
-    to      { @include transformX(100%); }
-}
-
-/* slide in from the right */
 @keyframes slideInRight {
     from    { @include transformX(100%); }
     to      { @include transformX(0); }
@@ -47,6 +37,32 @@
 @-webkit-keyframes slideInRight {
     from    { @include transformX(100%); }
     to      { @include transformX(0); }
+}
+@keyframes slideOutRight {
+    to      { @include transformX(100%); }
+}
+
+@-webkit-keyframes slideOutRight {
+    to      { @include transformX(100%); }
+}
+
+
+@keyframes slideInLeft {
+    from    { @include transformX(-100%); }
+    to      { @include transformX(0); }
+}
+
+@-webkit-keyframes slideInLeft {
+    from    { @include transformX(-100%); }
+    to      { @include transformX(0); }
+}
+
+@keyframes inLeftOutRight {
+    to      { @include transformX(-100%); opacity: 0; }
+}
+
+@-webkit-keyframes inLeftOutRight {
+    to      { @include transformX(-100%); opacity: 0;}
 }
 
 /* appear */
@@ -62,17 +78,38 @@
 }
 
 .ng-enter{ 
-  /*animation: slideInRight 0.5s both ease-in; */
+  /*animation: slideInRight 0.5s both ease-out; */
    /*-webkit-transition: all 1s ease-out;*/
-   animation: inopacity 0.5s both ease-in; 
-  z-index: 88;
+   /*animation: inopacity 0.5s both ease-in; */
+  /*z-index: 88;  */
 }
+
+.rightin.ng-enter {
+  animation: slideInRight 0.3s both ease-out;
+  z-index: 99;  
+}
+
+.rightin.ng-leave{
+  animation: slideOutLeft 0.3s both ease-out;
+    z-index: 88; 
+}
+
+.leftin.ng-enter {
+  animation: slideInLeft 0.3s both ease-out;
+  z-index: 99;  
+}
+
+.leftin.ng-leave{ /*临时*/
+  animation: inLeftOutRight 0.3s both ease-out;
+    z-index: 88; 
+}
+
 .ng-leave{ 
   /*&.goback{*/
-    /*animation: slideOutLeft 0.5s both ease-in; */
-   animation: Outopacity 0.5s both ease-put; 
+    /*animation: slideOutLeft 0.5s both ease-out; */
+   /*animation: Outopacity 0.5s both ease-put; */
     /*-webkit-transition: all 1s ease-in; */
-    z-index: 99; 
+    /*z-index: 99; */
 /*  }
   &.goinside{
     animation: slideOutRight 0.5s both ease-in; 
