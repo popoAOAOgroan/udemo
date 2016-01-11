@@ -144,3 +144,79 @@
   -webkit-animation: finger 0.3s forwards ease-in;
   -o-animation: finger 0.3s forwards ease-in;
 }  
+
+/* star animation */
+@keyframes staranimation {
+    from    { background-position: 0 100%;}
+    to      { background-position: 0 0%;}
+}
+
+@-moz-keyframes staranimation {
+    from    { background-position: 0 100%;}
+    to      { background-position: 0 0%;}
+}
+
+@-webkit-keyframes staranimation {
+    from    { background-position: 0 100%;}
+    to      { background-position: 0 0%;}
+}
+
+@-o-keyframes staranimation {
+    from    { background-position: 0 100%;}
+    to      { background-position: 0 0%;}
+}
+
+/* catalogue animation */
+@keyframes cataloguesideout {
+    from    { transform: translate(0px, 0px);}
+    to      { transform: translate(0px, 100%);}
+}
+
+@-moz-keyframes cataloguesideout {
+    from    { transform: translate(0px, 0px);}
+    to      { transform: translate(0px, 100%);}
+}
+
+@-webkit-keyframes cataloguesideout {
+    from    { transform: translate(0px, 0px);}
+    to      { transform: translate(0px, 100%);}
+}
+
+@-o-keyframes cataloguesideout {
+    from    { transform: translate(0px, 0px);}
+    to      { transform: translate(0px, 100%);}
+}
+
+ /*=======================*/
+@keyframes cataloguesidein {
+    from    { transform: translate(0px, 100%);}
+    to      { transform: translate(0px, 0);}
+}
+
+@-moz-keyframes cataloguesidein {
+    from    { transform: translate(0px, 100%);}
+    to      { transform: translate(0px, 0);}
+}
+
+@-webkit-keyframes cataloguesidein {
+    from    { transform: translate(0px, 100%);}
+    to      { transform: translate(0px, 0);}
+}
+
+@-o-keyframes cataloguesidein {
+    from    { transform: translate(0px, 100%);}
+    to      { transform: translate(0px, 0);}
+}
+ /*=======================*/
+.catalogue-sidein{
+  animation: cataloguesidein 0.5s forwards;
+  -moz-animation: cataloguesidein 0.5s forwards;
+  -webkit-animation: cataloguesidein 0.5s forwards;
+  -o-animation: cataloguesidein 0.5s forwards;
+}  
+.catalogue-sideout{
+  animation: cataloguesideout 0.5s forwards;
+  -moz-animation: cataloguesideout 0.5s forwards;
+  -webkit-animation: cataloguesideout 0.5s forwards;
+  -o-animation: cataloguesideout 0.5s forwards;
+}  

@@ -1,6 +1,11 @@
 
+/*image*/
 @import "global-img";
 @import "image";
+@import "star";
+@import "ebook";
+
+/*css*/
 @import "reset";
 @import "global";  
 @import "animate";
@@ -483,3 +488,246 @@
 		}
 	}
 }
+
+
+/**
+ * 10 Animation Steps
+ */
+
+.con-demosteps{
+	width: inherit;
+	height: inherit;
+	background: #f6fafc;
+	text-align: center;
+	padding: 5rem 0 0 0;
+	i{
+		margin: auto;
+		display: block;
+		width: 103px;
+		height: 103px;
+		background: url('../../images/star-s65bf8c70f3.png') no-repeat 0 -5871px;
+		/*background-size: 0 5800%;*/
+		outline: none;
+	}
+	i:active{
+		background: none;
+		outline-color: none;
+	}
+	.play{
+		animation: staranimation steps(57) 1s 1;
+	}
+	.stop{
+		animation-play-state: paused;
+	}
+}
+
+
+/**
+ * 11 Ebook
+ */
+
+ .con-demoebook{
+	width: 100%;
+	height: 100%;
+ 	>div{
+ 		&.ebook{
+ 			>div{position: absolute;}
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0px;
+			right: 0px;
+	 		background: #EBEBEB;
+	 		color: #4D4D4D;
+    		overflow: hidden;
+ 			.title{
+			    margin: 1rem 0;
+			    padding: 5rem 1rem 0 1rem;
+ 			}
+ 			.content{
+			    word-wrap: break-word !important;
+			    max-width: 100%;
+			    height: auto !important;
+			    margin: 0 0 15px;
+			    padding: 0 1rem 4rem 1rem; 
+ 			}
+ 		}
+ 		&.font1{
+ 			.title{
+			    font-weight: 700;
+			    font-size: 2rem;
+			    line-height: 2.2rem;
+ 			}
+ 			.content{
+			    font-size: 1.8rem !important;
+			    line-height: 2.2rem;
+ 			}
+ 		}
+ 		&.font2{
+ 			.title{
+			    font-weight: 800;
+			    font-size: 2.5rem;
+			    line-height: 2.7rem;
+ 			}
+ 			.content{
+			    font-size: 2.2rem !important;
+			    line-height: 2.6rem;
+ 			}
+ 		}
+ 		&.font3{
+ 			.title{
+			    font-weight: 900;
+			    font-size: 3rem;
+			    line-height: 3.2rem;
+ 			}
+ 			.content{
+			    font-size: 2.4rem !important;
+			    line-height: 2.8rem;
+ 			}
+ 		}
+ 	}
+ 	nav{
+ 		width: 100%;
+ 		height: 4rem;
+ 		position: absolute;
+ 		bottom: 0;
+ 		@include flex-display;
+	    padding: 0.5rem 0;
+		border-top: 1px solid $line-color;
+		background: #fff;
+		z-index: $zindex-nav;
+		overflow: hidden;
+		@include transition( transform , 0.5s);
+		&.hide{
+	    	@include translate(0, 100%);
+		}
+ 		a{
+ 			@include flex(1);
+ 			height: 34px;
+ 			&.back{
+ 				@include ebook-sprite(ebook01);
+ 				background-position-x: center;
+ 			}
+ 			&.fontsize{
+ 				@include ebook-sprite(ebook02);
+ 				background-position-x: center;
+ 			}
+ 			&.mode{
+ 				@include ebook-sprite(ebook03);
+ 				background-position-x: center;
+ 			}
+ 			&.list{
+ 				@include ebook-sprite(ebook04);
+ 				background-position-x: center;
+ 			}
+ 			&.next{
+ 				@include ebook-sprite(ebook05);
+ 				background-position-x: center;
+ 			}
+ 		}
+ 	}
+ 	aside{
+ 		transition: background 500ms;
+	 	position: absolute;
+	 	z-index: $zindex-nav + 1;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		&.fadebackground{
+			background: rgba(213,213,213,0.75);
+		}
+		>div:first-child{
+	 		position: absolute;
+			z-index: $zindex-nav + 2;
+			height: 40%;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+		}
+		>div:last-child{
+	 		position: absolute;
+			z-index: $zindex-nav + 2;
+			background: #fff;
+			height: 60%;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			padding: 1rem;
+			border-top: 1px solid $line-color;
+			p{
+				text-align: center;
+			    padding: 0.5rem 0 0.5rem 0;
+			    display: inline-block;
+			    width: 100%;
+			    min-height: 10%;
+    			font-weight: bold;
+			}
+			>div{
+			    height: 90%;
+			    width: 100%;
+			    overflow: hidden;
+			}
+			li{
+				>a{width: 100%;display: inline-block;font-size: 1.5rem;outline-color: none;}
+				border-bottom: 1px #ccc dashed;
+				padding: 0.8rem 0 0.8rem 0.5rem;
+				&.current{background-color: #eee}
+			}
+			li:last-child{
+				text-align: center;
+				font-size: 1rem;
+				color: #ccc;
+				border: none;
+				padding: 1rem 0 0 0
+			}
+			li:active{
+				background-color: #bbb
+			}
+		}
+		.catalogue{
+		}
+ 	}
+ 	&.night{
+ 		color:#636970;
+		&.fadebackground{
+ 			background: rgba(69,69,69,0.68);
+		}
+ 		>aside{
+ 			>div:last-child{
+ 				a{color:#636970;}
+	 			background-color: #2e2e2e;
+    			border-top-color: #404040;
+ 			}
+ 		}
+ 		>div{
+ 			background:#1a1a1a;
+ 		}
+ 		>nav{
+ 			background-color: #2e2e2e;
+    		border-top-color: #404040;
+    		a{
+    			&.back{
+	 				@include ebook-sprite(ebook09);
+	 				background-position-x: center;
+	 			}
+	 			&.fontsize{
+	 				@include ebook-sprite(ebook08);
+	 				background-position-x: center;
+	 			}
+	 			&.mode{
+	 				@include ebook-sprite(ebook06);
+	 				background-position-x: center;
+	 			}
+	 			&.list{
+	 				@include ebook-sprite(ebook07);
+	 				background-position-x: center;
+	 			} 
+	 			&.next{
+	 				@include ebook-sprite(ebook10);
+	 				background-position-x: center;
+	 			}
+    		}
+ 		}
+ 	}
+ }

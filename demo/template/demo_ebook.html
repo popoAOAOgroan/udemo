@@ -1,0 +1,34 @@
+<div id="" class="con-demoebook"  ng-class="{true: '', false: 'night'}[toggle]">
+	<div id="ebook" class='ebook {{font}}'>
+		<div ng-click='showBothNav()'>
+			<h1 class="title">
+				{{ebook.title}}
+			</h1>
+			<div class="content">
+				{{ebook.content}}
+			</div>
+		</div>
+	</div>
+	<nav ng-class="{true: 'hide', false: ''}[isHideHeader]">
+		<a class="back" href="" ng-click='chaptBack(ebook.chapters);'></a>
+		<a class="fontsize" href="" ng-click='fontToggle()'></a>
+		<a class="mode" href="" ng-click='toggle=!toggle'></a>
+		<a class="list" href="" ng-click='isShowList=!isShowList;fadeOutAnimation=!fadeOutAnimation;catalogueToggle=false;showList()'></a>
+		<a class="next" href="" ng-click='chaptNext(ebook.chapters);'></a>
+	</nav>
+
+	<aside ng-show = 'isShowList' ng-class="{true: 'fadebackground', false: ''}[fadeOutAnimation]">
+		<div ng-click = ' hideList()'></div>
+		<div class='catalogue' ng-class="{true: 'catalogue-sideout', false: 'catalogue-sidein'}[catalogueToggle]">
+			<p>- 目录 -</p>
+			<div id = 'catalogueWrapper'>
+				<ul>
+					<li ng-repeat="chapt in list" ng-class="{true: 'current', false: ''}[chapt.chapters == ebook.chapters]">
+						<a href="" ng-click='chaptClick(chapt.chapters);' >{{chapt.title}}</a>
+					</li>
+				</ul>
+					<li> -- End -- </li>
+			</div>
+		</div>
+	</aside>
+</div>

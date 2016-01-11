@@ -18,6 +18,8 @@ angular.module('myApp', [
   'myApp.demo_multistep',
   'myApp.demo_iframe',
   'myApp.demo_djlist',
+  'myApp.demo_steps',
+  'myApp.demo_ebook',
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -55,9 +57,15 @@ angular.module('myApp', [
     };
   });
   
+  //hide header
+  $scope.isHideHeader = false;
+  $scope.$on("HideHeader", function (event, bool) {
+    $scope.isHideHeader = bool;
+  });
+
   $scope.EmailQuery = function() {
     if($scope.query){
-      console.log("jinqu??" + $scope.query);
+      console.log("search" + $scope.query);
       $scope.$broadcast("SearchQuery", $scope.query);
     }
   }

@@ -43,5 +43,15 @@
 			"name" : "Multiple-list[DJ]",
 			"url" : "#/demo_djlist",
 			"time" : "2015/12"
+		},
+		{
+			"name" : "Animation Steps",
+			"url" : "#/demo_steps",
+			"time" : "2016/1"
+		},
+		{
+			"name" : "E-book",
+			"url" : "#/demo_ebook",
+			"time" : "2016/1"
 		}
 ]}

@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon-precomposed" href="touch-icon-iphone-retina.png" />
-  <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+<!--   <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"> -->
 <!-- css -->
   <link rel="stylesheet" href="style/css/style.css">
   <link rel="stylesheet" href="bower_components/ngProgress-master/ngProgress.css">
@@ -32,13 +32,13 @@
   </header> 
   
   <!-->
-  <header class="header flex-box box1">
+  <header class="header flex-box box1" ng-class="{true: 'hide', false: ''}[isHideHeader]">
     <div class="left-side">
       <a ng-href="#/list" class="left-b back" ng-hide = 'displayBackBtnVar' ng-click = 'displayBackBtnVar = true;displaySearchBtnVar = false;displayInputVar = true; onOff=!onOff; animationcClass="leftin"'></a>
     </div>
     <div class="center-area">
-      <p class={{fontEffect}} ng-hide = '!displayInputVar'>{{UDemo}}</p>
-      <input type="text" ng-model = 'query' ng-hide = 'displayInputVar' value={{query}}>
+      <p class={{fontEffect}} ng-hide = '!displayInputVar'  ng-cloak>{{UDemo}}</p>
+      <input type="text" ng-model = 'query' ng-hide = 'displayInputVar' value={{query}} ng-cloak>
     </div>
     <div class="right-side" >
       <a ng-href="#/search" class="right-b search" ng-hide = 'displaySearchBtnVar' ng-click = "displayBackBtnVar = false;displayInputVar = false; EmailQuery(); query ='' "></a>
@@ -76,6 +76,8 @@
   <script src="controller/demo_multistep.js"></script>
   <script src="controller/demo_iframe.js"></script>
   <script src="controller/demo_djlist.js"></script>
+  <script src="controller/demo_steps.js"></script>
+  <script src="controller/demo_ebook.js"></script>
 
   <!-- baidu API
   <script type="text/javascript" name="baidu-tc-cerfication" data-appid="7362600" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
