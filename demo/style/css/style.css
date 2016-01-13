@@ -1425,28 +1425,45 @@ footer .active {
 .con-demoebook {
   width: 100%;
   height: 100%;
+  /*background: #EBEBEB;*/
 }
-/* line 533, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
+.con-demoebook > p {
+  background: #D7D7D7;
+  z-index: 1001;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 3px solid #DCDCDC;
+  line-height: 4rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: #676767;
+}
+/* line 547, ../sass/style.scss */
+.con-demoebook > p > span {
+  display: inline-block;
+  float: right;
+}
+/* line 553, ../sass/style.scss */
 .con-demoebook > div.ebook {
+  background: #EBEBEB;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0px;
   right: 0px;
-  background: #EBEBEB;
   color: #4D4D4D;
   overflow: hidden;
 }
-/* line 534, ../sass/style.scss */
-.con-demoebook > div.ebook > div {
-  position: absolute;
-}
-/* line 543, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 .con-demoebook > div.ebook .title {
   margin: 1rem 0;
-  padding: 5rem 1rem 0 1rem;
+  padding: 3rem 1rem 0 1rem;
 }
-/* line 547, ../sass/style.scss */
+/* line 566, ../sass/style.scss */
 .con-demoebook > div.ebook .content {
   word-wrap: break-word !important;
   max-width: 100%;
@@ -1454,40 +1471,40 @@ footer .active {
   margin: 0 0 15px;
   padding: 0 1rem 4rem 1rem;
 }
-/* line 556, ../sass/style.scss */
+/* line 575, ../sass/style.scss */
 .con-demoebook > div.font1 .title {
   font-weight: 700;
   font-size: 2rem;
   line-height: 2.2rem;
 }
-/* line 561, ../sass/style.scss */
+/* line 580, ../sass/style.scss */
 .con-demoebook > div.font1 .content {
-  font-size: 1.8rem !important;
-  line-height: 2.2rem;
+  font-size: 2rem !important;
+  line-height: 2.4rem;
 }
-/* line 567, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 .con-demoebook > div.font2 .title {
   font-weight: 800;
   font-size: 2.5rem;
   line-height: 2.7rem;
 }
-/* line 572, ../sass/style.scss */
+/* line 591, ../sass/style.scss */
 .con-demoebook > div.font2 .content {
   font-size: 2.2rem !important;
   line-height: 2.6rem;
 }
-/* line 578, ../sass/style.scss */
+/* line 597, ../sass/style.scss */
 .con-demoebook > div.font3 .title {
   font-weight: 900;
   font-size: 3rem;
   line-height: 3.2rem;
 }
-/* line 583, ../sass/style.scss */
+/* line 602, ../sass/style.scss */
 .con-demoebook > div.font3 .content {
   font-size: 2.4rem !important;
   line-height: 2.8rem;
 }
-/* line 589, ../sass/style.scss */
+/* line 608, ../sass/style.scss */
 .con-demoebook nav {
   width: 100%;
   height: 4rem;
@@ -1513,7 +1530,7 @@ footer .active {
   -webkit-transition: transform 0.5s;
   -o-transition: transform 0.5s;
 }
-/* line 601, ../sass/style.scss */
+/* line 620, ../sass/style.scss */
 .con-demoebook nav.hide {
   -moz-transform: translate(0, 100%);
   -ms-transform: translate(0, 100%);
@@ -1521,7 +1538,7 @@ footer .active {
   -o-transform: translate(0, 100%);
   transform: translate(0, 100%);
 }
-/* line 604, ../sass/style.scss */
+/* line 623, ../sass/style.scss */
 .con-demoebook nav a {
   -webkit-box-flex: 1;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -1537,46 +1554,46 @@ footer .active {
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
   height: 34px;
 }
-/* line 607, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 .con-demoebook nav a.back {
   background-position: 0 0;
   background-position-x: center;
 }
-/* line 611, ../sass/style.scss */
+/* line 630, ../sass/style.scss */
 .con-demoebook nav a.fontsize {
   background-position: 0 -34px;
   background-position-x: center;
 }
-/* line 615, ../sass/style.scss */
+/* line 634, ../sass/style.scss */
 .con-demoebook nav a.mode {
   background-position: 0 -68px;
   background-position-x: center;
 }
-/* line 619, ../sass/style.scss */
+/* line 638, ../sass/style.scss */
 .con-demoebook nav a.list {
   background-position: 0 -102px;
   background-position-x: center;
 }
-/* line 623, ../sass/style.scss */
+/* line 642, ../sass/style.scss */
 .con-demoebook nav a.next {
   background-position: 0 -136px;
   background-position-x: center;
 }
-/* line 629, ../sass/style.scss */
+/* line 648, ../sass/style.scss */
 .con-demoebook aside {
   transition: background 500ms;
   position: absolute;
-  z-index: 1000;
+  z-index: 1001;
   bottom: 0px;
   left: 0px;
   right: 0px;
   top: 0px;
 }
-/* line 637, ../sass/style.scss */
+/* line 656, ../sass/style.scss */
 .con-demoebook aside.fadebackground {
   background: rgba(213, 213, 213, 0.75);
 }
-/* line 640, ../sass/style.scss */
+/* line 659, ../sass/style.scss */
 .con-demoebook aside > div:first-child {
   position: absolute;
   z-index: 1001;
@@ -1585,7 +1602,7 @@ footer .active {
   left: 0px;
   right: 0px;
 }
-/* line 648, ../sass/style.scss */
+/* line 667, ../sass/style.scss */
 .con-demoebook aside > div:last-child {
   position: absolute;
   z-index: 1001;
@@ -1596,8 +1613,9 @@ footer .active {
   right: 0px;
   padding: 1rem;
   border-top: 1px solid #d7e3f0;
+  /*transform: translate(0px, 100%);*/
 }
-/* line 658, ../sass/style.scss */
+/* line 678, ../sass/style.scss */
 .con-demoebook aside > div:last-child p {
   text-align: center;
   padding: 0.5rem 0 0.5rem 0;
@@ -1606,29 +1624,29 @@ footer .active {
   min-height: 10%;
   font-weight: bold;
 }
-/* line 666, ../sass/style.scss */
+/* line 686, ../sass/style.scss */
 .con-demoebook aside > div:last-child > div {
   height: 90%;
   width: 100%;
   overflow: hidden;
 }
-/* line 671, ../sass/style.scss */
+/* line 691, ../sass/style.scss */
 .con-demoebook aside > div:last-child li {
   border-bottom: 1px #ccc dashed;
   padding: 0.8rem 0 0.8rem 0.5rem;
 }
-/* line 672, ../sass/style.scss */
+/* line 692, ../sass/style.scss */
 .con-demoebook aside > div:last-child li > a {
   width: 100%;
   display: inline-block;
   font-size: 1.5rem;
   outline-color: none;
 }
-/* line 675, ../sass/style.scss */
+/* line 695, ../sass/style.scss */
 .con-demoebook aside > div:last-child li.current {
   background-color: #eee;
 }
-/* line 677, ../sass/style.scss */
+/* line 697, ../sass/style.scss */
 .con-demoebook aside > div:last-child li:last-child {
   text-align: center;
   font-size: 1rem;
@@ -1636,58 +1654,111 @@ footer .active {
   border: none;
   padding: 1rem 0 0 0;
 }
-/* line 684, ../sass/style.scss */
+/* line 704, ../sass/style.scss */
 .con-demoebook aside > div:last-child li:active {
   background-color: #bbb;
 }
-/* line 691, ../sass/style.scss */
+/* line 709, ../sass/style.scss */
 .con-demoebook.night {
   color: #636970;
+  background: rgba(69, 69, 69, 0.68);
 }
-/* line 693, ../sass/style.scss */
+/* line 712, ../sass/style.scss */
 .con-demoebook.night.fadebackground {
   background: rgba(69, 69, 69, 0.68);
 }
-/* line 697, ../sass/style.scss */
+/* line 715, ../sass/style.scss */
+.con-demoebook.night > p {
+  background: #1B1B1B;
+  border-bottom: 3px solid #414141;
+}
+/* line 720, ../sass/style.scss */
 .con-demoebook.night > aside > div:last-child {
   background-color: #2e2e2e;
   border-top-color: #404040;
 }
-/* line 698, ../sass/style.scss */
+/* line 721, ../sass/style.scss */
 .con-demoebook.night > aside > div:last-child a {
   color: #636970;
 }
-/* line 703, ../sass/style.scss */
+/* line 726, ../sass/style.scss */
 .con-demoebook.night > div {
   background: #1a1a1a;
 }
-/* line 706, ../sass/style.scss */
+/* line 729, ../sass/style.scss */
 .con-demoebook.night > nav {
   background-color: #2e2e2e;
   border-top-color: #404040;
 }
-/* line 710, ../sass/style.scss */
+/* line 733, ../sass/style.scss */
 .con-demoebook.night > nav a.back {
   background-position: 0 -272px;
   background-position-x: center;
 }
-/* line 714, ../sass/style.scss */
+/* line 737, ../sass/style.scss */
 .con-demoebook.night > nav a.fontsize {
   background-position: 0 -238px;
   background-position-x: center;
 }
-/* line 718, ../sass/style.scss */
+/* line 741, ../sass/style.scss */
 .con-demoebook.night > nav a.mode {
   background-position: 0 -170px;
   background-position-x: center;
 }
-/* line 722, ../sass/style.scss */
+/* line 745, ../sass/style.scss */
 .con-demoebook.night > nav a.list {
   background-position: 0 -204px;
   background-position-x: center;
 }
-/* line 726, ../sass/style.scss */
+/* line 749, ../sass/style.scss */
 .con-demoebook.night > nav a.next {
   background-position: 0 -306px;
   background-position-x: center;
+}
+/* line 758, ../sass/style.scss */
+.con-demoebook.v2 > div.hide {
+  opacity: 0.0;
+}
+/* line 759, ../sass/style.scss */
+.con-demoebook.v2 > div.ebook {
+  top: 3rem;
+}
+/* line 761, ../sass/style.scss */
+.con-demoebook.v2 > div.ebook .title {
+  padding: 0 1rem;
+  margin: 0;
+  height: 5rem;
+  line-height: 5rem;
+}
+/* line 768, ../sass/style.scss */
+.con-demoebook.v2 > div.midArea {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  margin-top: -133.33333px;
+  margin-left: -100px;
+}
+/* line 781, ../sass/style.scss */
+.con-demoebook.v2 > div.tips {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 3rem;
+  margin-top: -1.5rem;
+  margin-left: -50%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 3rem;
+  color: #fff;
+}
+/* line 798, ../sass/style.scss */
+.con-demoebook.v2 > aside {
+  transition: none;
+  background: rgba(213, 213, 213, 0.75);
 }

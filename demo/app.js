@@ -20,6 +20,7 @@ angular.module('myApp', [
   'myApp.demo_djlist',
   'myApp.demo_steps',
   'myApp.demo_ebook',
+  'myApp.demo_ebookv2',
 ])
 
 .config(['$routeProvider', function($routeProvider) {

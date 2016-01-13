@@ -1,0 +1,43 @@
+<div id="" class="con-demoebook v2"  ng-class="{true: '', false: 'night'}[toggle]">
+	<p class='pagination'>第{{ebook.chapters}}章  {{ebook.title}}<span>{{currentPageNum}}/{{totalPageNum}}</span></p>
+
+	<div ng-class="{true: '', false: 'hide'}[isLoading]" id="ebook" class='ebook {{font}}'>
+		<div class='scrollView'>
+			<h1 class="title">
+				{{ebook.title}}
+			</h1>
+			<div class="content">
+				{{ebook.content}}
+			</div>
+		</div>
+	</div>
+
+	<nav ng-class="{true: 'hide', false: ''}[isHideHeader]">
+		<a class="fontsize" href="" ng-click='fontToggle()'></a>
+		<a class="mode" href="" ng-click='toggle=!toggle'></a>
+		<a class="list" href="" ng-click='isShowList=!isShowList;fadeOutAnimation=!fadeOutAnimation;catalogueToggle=false;showList()'></a>
+	</nav>
+
+	<aside ng-show = 'isShowList'>
+		<div ng-click = ' isShowList=!isShowList'></div>
+		<div class='catalogue' ><!-- ng-class="{true: 'catalogue-sideout', false: 'catalogue-sidein'}[catalogueToggle]" -->
+			<p>- 目录 -</p>
+			<div id = 'catalogueWrapper'>
+				<ul>
+					<li ng-repeat="chapt in list" ng-class="{true: 'current', false: ''}[chapt.chapters == ebook.chapters]">
+						<a href="" ng-click='chaptClick(chapt.chapters);' >{{chapt.title}}</a>
+					</li>
+					<li> -- End -- </li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+
+	<div class='midArea' ng-click='showBothNav()'></div>
+
+	<div class='tips' ng-show = '!isLoading||isLastPage||isFirstPage'>
+		<i class='m1' ng-show = '!isLoading'>Loading...</i>
+		<i class='m2' ng-show = 'isFirstPage'>已是第一页</i>
+		<i class='m3' ng-show = 'isLastPage'>本书完</i>
+	</div>
+</div>

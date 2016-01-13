@@ -50,8 +50,13 @@
 			"time" : "2016/1"
 		},
 		{
-			"name" : "E-book",
+			"name" : "E-book v1 scroll",
 			"url" : "#/demo_ebook",
+			"time" : "2016/1"
+		},
+		{
+			"name" : "E-book v2 分页",
+			"url" : "#/demo_ebookv2",
 			"time" : "2016/1"
 		}
 ]}
